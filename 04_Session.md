@@ -73,3 +73,5 @@ Ans.  This is because, when we run a spark commands on the cli the job is not su
   
    ### df.show() is an action.  
    if we use df.show(truncate = False) .. it will forcefully show all the records.  
+
+ **df.printSchema()**
