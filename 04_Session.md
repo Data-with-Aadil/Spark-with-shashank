@@ -45,8 +45,33 @@ Ans.  This is because, when we run a spark commands on the cli the job is not su
 -- for this we need to import a library and we can also define the datatype there:-  
   from pyspark.sql.types import StructType,StructField, StringType, IntegerType
   
-**Struct:-** it is a custom datatype(mainly from the c,c++), which is a combination of multiple data-type.
+**Struct:-** it is a custom datatype(mainly from the c,c++), which is a combination of multiple data-type.  
+    
+  if we have all the cols having data in string format or integer format we will use the below array type class to define our schema.
+
+
+from pyspark.sql.types import ArrayType, StringType
+
+schema = ArrayType(StringType(), True)
+
+from pyspark.sql.types import ArrayType, IntegerType
+
+schema = ArrayType(IntegerType(), True)  
   
+--------------------------------------------------------------------------------------------  
+if we have all the cols having data in different-different format we will use the below struct type class to define our schema.
+
+from pyspark.sql.types import StructType, StructField, StringType, IntegerType
+
+schema = StructType([
+    StructField("firstname", StringType(), True), 
+    StructField("middlename", StringType(), True),
+    StructField("lastname", StringType(), True),
+    StructField("id", IntegerType(), True),
+    StructField("gender", StringType(), True)
+])  
+    
+  -----------------------------------------------------------------------------------------------------------------------  
   ### import necessary module
   from pyspark.sql.types import StructType,StructField, StringType, IntegerType  
       person_list = [("Berry","","Allen",1,"M"),
