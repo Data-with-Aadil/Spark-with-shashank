@@ -46,7 +46,7 @@ Ans.  This is because, when we run a spark commands on the cli the job is not su
   from pyspark.sql.types import StructType,StructField, StringType, IntegerType
   
 **Struct:-** it is a custom datatype(mainly from the c,c++), which is a combination of multiple data-type.  
-    
+    -----------------------------------------------------------------------------------------------------------  
   if we have all the cols having data in string format or integer format we will use the below array type class to define our schema.
 
 
