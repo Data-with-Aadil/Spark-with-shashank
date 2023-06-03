@@ -100,3 +100,5 @@ schema = StructType([
    if we use df.show(truncate = False) .. it will forcefully show all the records.  
 
  **df.printSchema()**
+
+  After this go through the pratical of the lecture, available in bigdata folder.  
