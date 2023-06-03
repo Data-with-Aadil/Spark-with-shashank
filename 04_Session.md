@@ -64,11 +64,11 @@ if we have all the cols having data in different-different format we will use th
 from pyspark.sql.types import StructType, StructField, StringType, IntegerType
 
 schema = StructType([
-    StructField("firstname", StringType(), True), 
-    StructField("middlename", StringType(), True),
-    StructField("lastname", StringType(), True),
-    StructField("id", IntegerType(), True),
-    StructField("gender", StringType(), True)
+    StructField("firstname", StringType(), True),   
+    StructField("middlename", StringType(), True),  
+    StructField("lastname", StringType(), True),  
+    StructField("id", IntegerType(), True),  
+    StructField("gender", StringType(), True)  
 ])  
     
   -----------------------------------------------------------------------------------------------------------------------  
